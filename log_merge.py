@@ -74,6 +74,6 @@ if __name__ == "__main__":
     parser.add_argument("--gap_ms", type=int, default=3000, help="Maximum gap in milliseconds to merge intervals (default: 3000).")
 
     args = parser.parse_args()
-    process_log_file(args.input_log, args.output_log, gap_ms=args.gap_ms)
+    process_log_file(args.i, args.o, gap_ms=args.gap_ms)
 
-    #python merge_intervals.py --i match_log.txt --o logall.txt --gap_ms 3000 
+    #python log_merge.py --i match_log.txt --o logall.txt --gap_ms 3000 
