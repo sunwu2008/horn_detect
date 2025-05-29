@@ -68,9 +68,9 @@ def main(full_mp3_path, sample_mp3_path, similarity_percent, step_ms=50, log_fil
     print(f"Searching for segments with similarity > {similarity_percent}%...")
     matches = match_segments(full_audio, sample_audio, step_ms=step_ms, similarity_threshold=similarity_threshold)
 
-    print(f"\n✅ {len(matches)} matches found.")
+    print(f"\n {len(matches)} matches found.")
     log_matches(matches, log_file)
-    print(f"📄 Log written to {log_file}")
+    print(f" Log written to {log_file}")
 
 # CLI parser
 if __name__ == "__main__":
