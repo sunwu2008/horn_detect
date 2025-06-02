@@ -53,7 +53,7 @@ def match_segments(full_audio, sample_audio, step_ms=50, similarity_threshold=0.
 
 # Write log file
 def log_matches(matches, log_path):
-    with open(log_path, "w") as f:
+    with open(log_path, "w",encoding="utf-8") as f:
         for start_ms, end_ms, similarity in matches:
             f.write(f"Match: {ms_to_timestamp(start_ms)} → {ms_to_timestamp(end_ms)} | Similarity: {similarity:.2f}\n")
 
